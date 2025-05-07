@@ -2,7 +2,7 @@ import './App.css';
 import WaitlistLandingPage from './Waitlist';
 function App() {
   return (
-    <div>
+    <div className='main-bg-controller'>
       <WaitlistLandingPage />
     </div>
   );
