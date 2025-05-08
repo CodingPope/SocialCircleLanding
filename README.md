@@ -8,7 +8,7 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
+Runs the app in development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
@@ -42,9 +42,8 @@ This repository contains the frontend code for the waitlist and marketing site t
 
 ## 🧰 Tech Stack
 
-- React (or HTML/CSS, depending on branch)
-- Tailwind CSS (optional) or plain CSS modules
-- Firebase-ready backend structure (optional)
+- React 
+- Firebase-ready backend structure
 - Designed with accessibility and mobile performance in mind
 
 ---
