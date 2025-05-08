@@ -1,5 +1,5 @@
 import './App.css';
-import WaitlistLandingPage from './Waitlist';
+import WaitlistLandingPage from './pages/Waitlist';
 function App() {
   return (
     <div className='main-bg-controller'>

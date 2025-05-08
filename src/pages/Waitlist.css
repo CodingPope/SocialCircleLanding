@@ -1,0 +1,9 @@
+.hero-phone-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 2rem;
+  padding-top: 2rem;
+  margin-bottom: 2rem;
+}

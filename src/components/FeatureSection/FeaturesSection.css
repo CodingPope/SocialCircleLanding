@@ -1,0 +1,23 @@
+.features {
+  color: #1a1a1a;
+  text-align: center;
+}
+
+.features h2 {
+  font-size: 3rem;
+  margin-bottom: 0;
+}
+
+.features-intro {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  opacity: 0.8;
+  font-size: 1.2rem;
+}
+
+.features-grid {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}

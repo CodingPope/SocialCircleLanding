@@ -1,0 +1,62 @@
+.iphone-frame {
+  position: relative;
+  width: 300px;
+  max-width: 100%;
+  margin: 0 auto;
+  z-index: 2;
+  perspective: 1000px;
+  transform: rotateY(-10deg) rotateX(5deg);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border-radius: 60px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), 0 20px 60px rgba(0, 0, 0, 0.06);
+  z-index: 1;
+}
+
+.iphone-frame:hover {
+  transform: rotateY(0deg) rotateX(0deg);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+}
+
+.iphone-frame-img,
+.mock-phone1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.iphone-frame-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.mock-phone1 {
+  position: absolute;
+  top: 2%;
+  left: 4%;
+  width: 92%;
+  height: 96%;
+  z-index: 1;
+}
+
+.mock-phone {
+  width: 100%;
+  height: 100%;
+  border-radius: 43px;
+  overflow: hidden;
+  position: relative;
+  background: url('../../../public/mapui.jpg') center/cover no-repeat;
+  z-index: 1;
+}
+
+.mock-phone::before {
+  animation: spin 4s linear infinite;
+}
+
+.navIcons {
+  color: red;
+}

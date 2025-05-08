@@ -1,0 +1,59 @@
+.main {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+/* Hero Text Content */
+.hero-text {
+  flex: 2 1 500px;
+}
+
+.hero-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.hero-card {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 0 2rem 2rem 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-card::before {
+  content: '';
+  position: absolute;
+  inset: 0; /* fill the card */
+  background: linear-gradient(
+    135deg,
+    rgba(255, 175, 200, 0.6) 35%,
+    rgba(255, 175, 200, 0.6) 55%,
+    rgba(88, 134, 232, 0.6) 50%,
+    rgba(88, 134, 232, 0.6) 75%,
+    rgba(179, 74, 213, 0.6) 70%,
+    rgba(179, 74, 213, 0.6) 90%
+  );
+  filter: blur(80px);
+  z-index: -1;
+}
+
+.hero-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
