@@ -13,7 +13,7 @@
 
 .waitlist-form button {
   padding: 0.75rem 1.5rem;
-  background: #007bff;
+  background: #f76c5e;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -24,7 +24,7 @@
 }
 
 .waitlist-form button:hover {
-  background: #0056b3;
+  background: #e65c4f;
 }
 
 /* Ripple Effect for Button */
@@ -53,4 +53,6 @@
     transform: scale(4);
     opacity: 0;
   }
+}
+@media (max-width: 768px) {
 }

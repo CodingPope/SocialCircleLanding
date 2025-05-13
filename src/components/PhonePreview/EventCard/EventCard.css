@@ -1,54 +1,79 @@
 .event-cards {
   position: absolute;
-  bottom: 60px;
+  bottom: 55px;
   left: 0;
   right: 0;
   display: flex;
-  gap: 0.75rem;
+  flex-direction: row;
   padding: 0.75rem;
-  overflow-x: auto;
-  scroll-behavior: smooth;
   z-index: 1;
+  margin-left: -3.5rem;
 }
-
 .event-card {
-  flex: 0 0 auto;
-  width: 140px;
-  background: #fff;
-  border-radius: 12px;
-  padding: 0.75rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  position: relative;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  background: white;
+  border-radius: 24px;
+  padding: 1rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  font-family: 'Segoe UI', sans-serif;
+  margin-right: 0.25rem;
 }
 
-.event-card:hover {
-  transform: rotateX(6deg) translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-}
-
-.event-card h3 {
-  margin: 0 0 0.5rem;
-  font-size: 1rem;
-}
-
-.event-card p {
-  margin: 0;
-  font-size: 0.85rem;
-  color: #555;
-}
-
-.card-icon {
-  position: absolute;
-  bottom: 0.75rem;
-  right: 0.75rem;
-  width: 32px;
-  height: 32px;
-  background: #fff;
-  border-radius: 50%;
+.host {
   display: flex;
   align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  gap: 0.75rem;
+}
+
+.host img {
+  width: 48px;
+  height: 48px;
+  border-radius: 15%;
+  object-fit: cover;
+}
+
+.host-details .host-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+  width: 100%;
+}
+
+.rating {
+  font-size: 0.85rem;
+  color: #444;
+}
+
+.phone-event-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  width: 15rem;
+}
+
+.phone-description {
+  color: #555;
   font-size: 1rem;
+  width: 100%;
+}
+
+.meta {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.join-btn {
+  margin-top: 0.5rem;
+  background-color: #2563eb; /* Blue */
+  color: white;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.join-btn:hover {
+  background-color: #1d4ed8;
 }

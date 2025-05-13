@@ -15,8 +15,12 @@ export default function PhonePreview({ eventCards, navIcons }) {
         <div className='mock-phone1'>
           <div className='mock-phone'>
             <div className='event-title'>
-              <h6>Social Circle</h6>
-              <img src='/bellicon.png' alt='Bell Icon' width='20' height='20' />
+              <img
+                src='/social circle logo.png'
+                alt='Logo'
+                className='logo-img'
+              />
+              <h6 className='logo'>Social Circle</h6>
             </div>
             <div className='event-cards'>
               {eventCards.map((card) => (
