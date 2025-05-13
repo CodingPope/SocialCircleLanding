@@ -16,10 +16,11 @@ export default function PhonePreview({ eventCards, navIcons }) {
           <div className='mock-phone'>
             <div className='event-title'>
               <img
-                src='/social circle logo.png'
+                src='/social circle Logo.png'
                 alt='Logo'
                 className='logo-img'
               />
+
               <h6 className='logo'>Social Circle</h6>
             </div>
             <div className='event-cards'>
