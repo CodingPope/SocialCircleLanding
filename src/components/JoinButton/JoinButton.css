@@ -27,32 +27,28 @@
   background: #e65c4f;
 }
 
-/* Ripple Effect for Button */
-.btn-ripple::after {
-  content: '';
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  background: rgba(255, 255, 255, 0.5);
-  border-radius: 50%;
-  transform: scale(0);
-  opacity: 0;
-  pointer-events: none;
-  animation: ripple 0.6s ease-out;
-}
-
-.btn-ripple:active::after {
-  top: var(--ripple-y);
-  left: var(--ripple-x);
-  opacity: 1;
-  transform: scale(1);
-}
-
-@keyframes ripple {
-  to {
-    transform: scale(4);
-    opacity: 0;
+/* New animation for button click */
+@keyframes btn-bounce {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  70% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
   }
 }
+
+.btn-animate {
+  animation: btn-bounce 0.5s ease;
+}
+
 @media (max-width: 768px) {
 }

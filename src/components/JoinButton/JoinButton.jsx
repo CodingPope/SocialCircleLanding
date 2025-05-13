@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './JoinButton.css';
 
 export default function JoinButton({ children, ...props }) {
+  const [animating, setAnimating] = useState(false);
+  const btnRef = useRef(null);
+
   const handleRipple = (e) => {
     const btn = e.currentTarget;
     const rect = btn.getBoundingClientRect();
@@ -9,14 +12,31 @@ export default function JoinButton({ children, ...props }) {
     btn.style.setProperty('--ripple-y', `${e.clientY - rect.top - 50}px`);
   };
 
+  const handleClick = (e) => {
+    handleRipple(e);
+    if (animating) return; // prevent re-trigger while animating
+    setAnimating(true);
+    if (props.onClick) props.onClick(e);
+  };
+
+  useEffect(() => {
+    if (!animating) return;
+    const btn = btnRef.current;
+    const handleAnimationEnd = () => {
+      setAnimating(false);
+    };
+    btn.addEventListener('animationend', handleAnimationEnd);
+    return () => {
+      btn.removeEventListener('animationend', handleAnimationEnd);
+    };
+  }, [animating]);
+
   return (
     <button
       {...props}
-      className='btn-ripple'
-      onClick={(e) => {
-        handleRipple(e);
-        if (props.onClick) props.onClick(e);
-      }}
+      ref={btnRef}
+      className={`btn-ripple ${animating ? 'btn-animate' : ''}`}
+      onClick={handleClick}
     >
       {children}
     </button>
