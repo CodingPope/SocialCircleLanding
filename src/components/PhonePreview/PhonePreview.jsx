@@ -24,8 +24,8 @@ export default function PhonePreview({ eventCards, navIcons }) {
               <h6 className='logo'>Social Circle</h6>
             </div>
             <div className='event-cards'>
-              {eventCards.map((card) => (
-                <EventCard key={card.id} {...card} />
+              {[...eventCards, ...eventCards].map((card, index) => (
+                <EventCard key={index} {...card} />
               ))}
             </div>
             <BottomNav items={navIcons} className='navIcons' />

@@ -81,3 +81,18 @@
     transform: rotate(360deg);
   }
 }
+.event-cards {
+  display: flex;
+  gap: 10px;
+  white-space: wrap;
+  animation: scroll-left 30s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(10%);
+  }
+  100% {
+    transform: translateX(-500%);
+  }
+}
